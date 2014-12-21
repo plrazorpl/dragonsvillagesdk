@@ -1,6 +1,8 @@
 package dragonsVillage.abstracts;
 
-public abstract class ADatagram <T> {
+import java.io.Serializable;
+
+public abstract class ADatagram <T> implements Serializable {
     private long id;
     private T datagram;
 

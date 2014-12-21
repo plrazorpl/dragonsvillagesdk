@@ -1,10 +1,15 @@
 package dragonsVillage.dtos;
 
+import dragonsVillage.Enums.EPlayerSkin;
+
 import java.io.Serializable;
 
 public class LoginUserDTO implements Serializable {
     private long id;
     private String login;
+    private EPlayerSkin skin;
+    private int positionX;
+    private int positionY;
 
     public long getId() {
         return id;
@@ -40,5 +45,29 @@ public class LoginUserDTO implements Serializable {
         int result = (int) (id ^ (id >>> 32));
         result = 31 * result + (login != null ? login.hashCode() : 0);
         return result;
+    }
+
+    public int getPositionX() {
+        return positionX;
+    }
+
+    public void setPositionX(int positionX) {
+        this.positionX = positionX;
+    }
+
+    public int getPositionY() {
+        return positionY;
+    }
+
+    public void setPositionY(int positionY) {
+        this.positionY = positionY;
+    }
+
+    public EPlayerSkin getSkin() {
+        return skin;
+    }
+
+    public void setSkin(EPlayerSkin skin) {
+        this.skin = skin;
     }
 }

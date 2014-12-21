@@ -1,6 +1,8 @@
 package dragonsVillage.Datagrams.basicDatagram;
 
-public class MoveDatagram {
+import java.io.Serializable;
+
+public class MoveDatagram implements Serializable {
 
     private int x;
     private int y;

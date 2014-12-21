@@ -1,6 +1,8 @@
 package dragonsVillage.Enums;
 
-public enum EOperationType {
+import java.io.Serializable;
+
+public enum EOperationType implements Serializable {
     PLAYER_MOVE;
 
 }
