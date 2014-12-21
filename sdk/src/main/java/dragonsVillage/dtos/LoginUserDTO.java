@@ -10,6 +10,8 @@ public class LoginUserDTO implements Serializable {
     private EPlayerSkin skin;
     private int positionX;
     private int positionY;
+    private MapDTO currentMap;
+    private long mapID;
 
     public long getId() {
         return id;
@@ -69,5 +71,21 @@ public class LoginUserDTO implements Serializable {
 
     public void setSkin(EPlayerSkin skin) {
         this.skin = skin;
+    }
+
+    public MapDTO getCurrentMap() {
+        return currentMap;
+    }
+
+    public void setCurrentMap(MapDTO currentMap) {
+        this.currentMap = currentMap;
+    }
+
+    public long getMapID() {
+        return mapID;
+    }
+
+    public void setMapID(long mapID) {
+        this.mapID = mapID;
     }
 }
