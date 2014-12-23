@@ -1,6 +1,7 @@
 package dragonsVillage.dtos;
 
 import dragonsVillage.Enums.EMapPointType;
+import dragonsVillage.Enums.EMapType;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ public class MapDTO implements Serializable{
     private EMapPointType[][] mapPointTypes;
     private List<LoginUserDTO>[][] usersMap;
     private List<LoginUserDTO> usersOnMap = new ArrayList<>();
+    private EMapType mapType;
     private long id;
 
     public EMapPointType[][] getMapPointTypes() {
@@ -59,5 +61,13 @@ public class MapDTO implements Serializable{
 
     public void setUsersOnMap(List<LoginUserDTO> usersOnMap) {
         this.usersOnMap = usersOnMap;
+    }
+
+    public EMapType getMapType() {
+        return mapType;
+    }
+
+    public void setMapType(EMapType mapType) {
+        this.mapType = mapType;
     }
 }

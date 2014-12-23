@@ -1,11 +1,12 @@
 package dragonsVillage.Enums;
 
-public enum EPlayerSkin {
-    DEFAULT("playerSkin/default.png");
+public enum EMapType {
+
+    DEFAULT("map/default");
+
     private String path;
 
-    EPlayerSkin(String path) {
-
+    EMapType(String path) {
         this.path = path;
     }
 

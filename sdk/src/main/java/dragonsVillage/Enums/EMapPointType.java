@@ -3,15 +3,24 @@ package dragonsVillage.Enums;
 import java.io.Serializable;
 
 public enum EMapPointType implements Serializable {
-    GROUND(0),
-    BUSHES(1),
-    MOUNT(2),
-    WALL(3),
-    FANCE(4);
+    GROUND(false, "/ground.png"),
+    BUSHES(false, "/bushes.png"),
+    TREE(true, "/tree.png");
 
-    private int value;
+    private boolean blocked;
+    private String path;
 
-    EMapPointType(int value) {
-        this.value = value;
+    EMapPointType(boolean blocked, String path) {
+
+        this.blocked = blocked;
+        this.path = path;
+    }
+
+    public boolean isBlocked() {
+        return blocked;
+    }
+
+    public String getPath() {
+        return path;
     }
 }

@@ -12,6 +12,8 @@ public class LoginUserDTO implements Serializable {
     private int positionY;
     private MapDTO currentMap;
     private long mapID;
+    private int actualSharpX;
+    private int actualSharpY;
 
     public long getId() {
         return id;
@@ -87,5 +89,21 @@ public class LoginUserDTO implements Serializable {
 
     public void setMapID(long mapID) {
         this.mapID = mapID;
+    }
+
+    public int getActualSharpX() {
+        return actualSharpX;
+    }
+
+    public void setActualSharpX(int actualSharpX) {
+        this.actualSharpX = actualSharpX;
+    }
+
+    public int getActualSharpY() {
+        return actualSharpY;
+    }
+
+    public void setActualSharpY(int actualSharpY) {
+        this.actualSharpY = actualSharpY;
     }
 }
