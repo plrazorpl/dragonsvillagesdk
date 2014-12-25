@@ -9,8 +9,8 @@ import java.util.List;
 
 public class MapDTO implements Serializable{
     private EMapPointType[][] mapPointTypes;
-    private List<LoginUserDTO>[][] usersMap;
-    private List<LoginUserDTO> usersOnMap = new ArrayList<>();
+    private ArrayList<LoginUserDTO>[][] usersMap;
+    private ArrayList<LoginUserDTO> usersOnMap;
     private EMapType mapType;
     private long id;
 
@@ -22,11 +22,11 @@ public class MapDTO implements Serializable{
         this.mapPointTypes = mapPointTypes;
     }
 
-    public List<LoginUserDTO>[][] getUsersMap() {
+    public ArrayList<LoginUserDTO>[][] getUsersMap() {
         return usersMap;
     }
 
-    public void setUsersMap(List<LoginUserDTO>[][] usersMap) {
+    public void setUsersMap(ArrayList<LoginUserDTO>[][] usersMap) {
         this.usersMap = usersMap;
     }
 
@@ -55,11 +55,11 @@ public class MapDTO implements Serializable{
         return (int) (id ^ (id >>> 32));
     }
 
-    public List<LoginUserDTO> getUsersOnMap() {
+    public ArrayList<LoginUserDTO> getUsersOnMap() {
         return usersOnMap;
     }
 
-    public void setUsersOnMap(List<LoginUserDTO> usersOnMap) {
+    public void setUsersOnMap(ArrayList<LoginUserDTO> usersOnMap) {
         this.usersOnMap = usersOnMap;
     }
 
