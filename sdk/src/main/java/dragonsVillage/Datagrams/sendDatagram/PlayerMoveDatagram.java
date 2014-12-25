@@ -1,12 +1,10 @@
 package dragonsVillage.Datagrams.sendDatagram;
 
-import dragonsVillage.Datagrams.basicDatagram.MoveDatagram;
+import dragonsVillage.Datagrams.responseDatagram.ResponseUserMoveDatagram;
 import dragonsVillage.abstracts.ADatagram;
 
-import java.io.Serializable;
-
-public class PlayerMoveDatagram extends ADatagram<MoveDatagram> {
-    public PlayerMoveDatagram(int id, MoveDatagram datagram) {
+public class PlayerMoveDatagram extends ADatagram<ResponseUserMoveDatagram> {
+    public PlayerMoveDatagram(int id, ResponseUserMoveDatagram datagram) {
         super(id, datagram);
     }
 }

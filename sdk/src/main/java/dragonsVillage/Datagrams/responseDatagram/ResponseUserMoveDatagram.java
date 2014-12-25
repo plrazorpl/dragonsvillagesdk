@@ -1,14 +1,16 @@
-package dragonsVillage.Datagrams.basicDatagram;
+package dragonsVillage.Datagrams.responseDatagram;
 
 import java.io.Serializable;
 
-public class MoveDatagram implements Serializable {
+public class ResponseUserMoveDatagram implements Serializable {
 
+    private long userID;
     private int x;
     private int y;
     private int speed;
 
-    public MoveDatagram(int x, int y, int speed) {
+    public ResponseUserMoveDatagram(long userID, int x, int y, int speed) {
+        this.userID = userID;
         this.x = x;
         this.y = y;
         this.speed = speed;
@@ -43,7 +45,7 @@ public class MoveDatagram implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        MoveDatagram that = (MoveDatagram) o;
+        ResponseUserMoveDatagram that = (ResponseUserMoveDatagram) o;
 
         if (speed != that.speed) return false;
         if (x != that.x) return false;
@@ -67,5 +69,13 @@ public class MoveDatagram implements Serializable {
                 ", y=" + y +
                 ", speed=" + speed +
                 '}';
+    }
+
+    public long getUserID() {
+        return userID;
+    }
+
+    public void setUserID(long userID) {
+        this.userID = userID;
     }
 }
