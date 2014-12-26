@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MapDTO implements Serializable{
+public class MapDTO extends ABaseDTO implements Serializable{
     private EMapPointType[][] mapPointTypes;
     private ArrayList<LoginUserDTO>[][] usersMap;
     private ArrayList<LoginUserDTO> usersOnMap;

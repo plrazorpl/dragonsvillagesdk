@@ -1,15 +1,17 @@
 package dragonsVillage.Datagrams.requestDatagram;
 
+import dragonsVillage.Datagrams.ABaseToUserDatagram;
 import dragonsVillage.Enums.EMoveSide;
 import dragonsVillage.dtos.LoginUserDTO;
 
 import java.io.Serializable;
 
-public class RequestMoveDatagram implements Serializable{
+public class RequestMoveFromUserDatagram extends ABaseToUserDatagram implements Serializable{
     private LoginUserDTO loginUserDTO;
     private EMoveSide moveSide;
 
-    public RequestMoveDatagram(LoginUserDTO loginUserDTO, EMoveSide moveSide) {
+    public RequestMoveFromUserDatagram(LoginUserDTO loginUserDTO, EMoveSide moveSide) {
+        super(loginUserDTO.getCurrentMap().getId());
         this.loginUserDTO = loginUserDTO;
         this.moveSide = moveSide;
     }

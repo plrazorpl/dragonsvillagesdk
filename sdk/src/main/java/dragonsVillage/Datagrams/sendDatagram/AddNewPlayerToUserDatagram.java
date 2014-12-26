@@ -1,14 +1,15 @@
 package dragonsVillage.Datagrams.sendDatagram;
 
+import dragonsVillage.Datagrams.ABaseToUserDatagram;
 import dragonsVillage.dtos.LoginUserDTO;
 
 import java.io.Serializable;
 
-public class AddNewPlayerDatagram implements Serializable {
+public class AddNewPlayerToUserDatagram implements Serializable {
 
     private LoginUserDTO loginUserDTO;
 
-    public AddNewPlayerDatagram(LoginUserDTO loginUserDTO){
+    public AddNewPlayerToUserDatagram(LoginUserDTO loginUserDTO){
         this.loginUserDTO = loginUserDTO;
     }
 

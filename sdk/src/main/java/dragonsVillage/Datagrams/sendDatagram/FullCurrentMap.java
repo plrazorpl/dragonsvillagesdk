@@ -1,8 +1,8 @@
 package dragonsVillage.Datagrams.sendDatagram;
 
+import dragonsVillage.Datagrams.ABaseToUserDatagram;
 import dragonsVillage.dtos.MapDTO;
 
-import java.io.FileOutputStream;
 import java.io.Serializable;
 
 public class FullCurrentMap implements Serializable {

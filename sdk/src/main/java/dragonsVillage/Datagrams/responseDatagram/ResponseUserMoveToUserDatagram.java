@@ -1,15 +1,17 @@
 package dragonsVillage.Datagrams.responseDatagram;
 
+import dragonsVillage.Datagrams.ABaseToUserDatagram;
+
 import java.io.Serializable;
 
-public class ResponseUserMoveDatagram implements Serializable {
+public class ResponseUserMoveToUserDatagram implements Serializable {
 
     private long userID;
     private int x;
     private int y;
     private int speed;
 
-    public ResponseUserMoveDatagram(long userID, int x, int y, int speed) {
+    public ResponseUserMoveToUserDatagram(long userID, int x, int y, int speed) {
         this.userID = userID;
         this.x = x;
         this.y = y;
@@ -45,7 +47,7 @@ public class ResponseUserMoveDatagram implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ResponseUserMoveDatagram that = (ResponseUserMoveDatagram) o;
+        ResponseUserMoveToUserDatagram that = (ResponseUserMoveToUserDatagram) o;
 
         if (speed != that.speed) return false;
         if (x != that.x) return false;

@@ -4,7 +4,7 @@ import dragonsVillage.Enums.EPlayerSkin;
 
 import java.io.Serializable;
 
-public class LoginUserDTO implements Serializable {
+public class LoginUserDTO extends ABaseDTO implements Serializable {
     private long id;
     private String login;
     private EPlayerSkin skin;
