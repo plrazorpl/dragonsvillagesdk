@@ -7,21 +7,21 @@ import dragonsVillage.dtos.LoginUserDTO;
 import java.io.Serializable;
 
 public class RequestMoveFromUserDatagram extends ABaseToUserDatagram implements Serializable{
-    private LoginUserDTO loginUserDTO;
+    private Long userID;
     private EMoveSide moveSide;
 
     public RequestMoveFromUserDatagram(LoginUserDTO loginUserDTO, EMoveSide moveSide) {
         super(loginUserDTO.getCurrentMap().getId());
-        this.loginUserDTO = loginUserDTO;
+        this.userID = loginUserDTO.getId();
         this.moveSide = moveSide;
     }
 
-    public LoginUserDTO getLoginUserDTO() {
-        return loginUserDTO;
+    public Long getUserID() {
+        return userID;
     }
 
-    public void setLoginUserDTO(LoginUserDTO loginUserDTO) {
-        this.loginUserDTO = loginUserDTO;
+    public void setUserID(Long userID) {
+        this.userID = userID;
     }
 
     public EMoveSide getMoveSide() {

@@ -3,6 +3,7 @@ package dragonsVillage.dtos;
 import dragonsVillage.Enums.EPlayerSkin;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class LoginUserDTO extends ABaseDTO implements Serializable {
     private long id;
@@ -14,6 +15,7 @@ public class LoginUserDTO extends ABaseDTO implements Serializable {
     private long mapID;
     private int actualSharpX;
     private int actualSharpY;
+    private ArrayList<Long> dragonsElements = new ArrayList<>();
 
     public long getId() {
         return id;
@@ -105,5 +107,13 @@ public class LoginUserDTO extends ABaseDTO implements Serializable {
 
     public void setActualSharpY(int actualSharpY) {
         this.actualSharpY = actualSharpY;
+    }
+
+    public ArrayList<Long> getDragonsElements() {
+        return dragonsElements;
+    }
+
+    public void setDragonsElements(ArrayList<Long> dragonsElements) {
+        this.dragonsElements = dragonsElements;
     }
 }

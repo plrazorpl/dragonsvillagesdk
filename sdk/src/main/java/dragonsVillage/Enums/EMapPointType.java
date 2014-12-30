@@ -5,7 +5,8 @@ import java.io.Serializable;
 public enum EMapPointType implements Serializable {
     GROUND(false, "/ground.png"),
     BUSHES(false, "/bushes.png"),
-    TREE(true, "/tree.png");
+    TREE(true, "/tree.png"),
+    DRAGON(true, "/empty.png");
 
     private boolean blocked;
     private String path;

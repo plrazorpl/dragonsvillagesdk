@@ -5,6 +5,7 @@ import dragonsVillage.Enums.EMapType;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class MapDTO extends ABaseDTO implements Serializable{
@@ -13,6 +14,9 @@ public class MapDTO extends ABaseDTO implements Serializable{
     private ArrayList<LoginUserDTO> usersOnMap;
     private EMapType mapType;
     private long id;
+    private ArrayList<Long> dragonsOnMap = new ArrayList<>();
+    private HashMap<Long,DragonDTO> dragonsDTO = new HashMap<>();
+    private ArrayList<DragonDTO>[][] dragonsMap;
 
     public EMapPointType[][] getMapPointTypes() {
         return mapPointTypes;
@@ -69,5 +73,33 @@ public class MapDTO extends ABaseDTO implements Serializable{
 
     public void setMapType(EMapType mapType) {
         this.mapType = mapType;
+    }
+
+    public ArrayList<Long> getDragonsOnMap() {
+        return dragonsOnMap;
+    }
+
+    public void setDragonsOnMap(ArrayList<Long> dragonsOnMap) {
+        this.dragonsOnMap = dragonsOnMap;
+    }
+
+    public HashMap<Long, DragonDTO> getDragonsDTO() {
+        return dragonsDTO;
+    }
+
+    public void setDragonsDTO(HashMap<Long, DragonDTO> dragonsDTO) {
+        this.dragonsDTO = dragonsDTO;
+    }
+
+    public ArrayList<DragonDTO>[][] getDragonsMap() {
+        if(dragonsMap == null) {
+            //TODO: fix table size
+            dragonsMap = new ArrayList[mapPointTypes.length][mapPointTypes.length];
+        }
+        return dragonsMap;
+    }
+
+    public void setDragonsMap(ArrayList<DragonDTO>[][] dragonsMap) {
+        this.dragonsMap = dragonsMap;
     }
 }
