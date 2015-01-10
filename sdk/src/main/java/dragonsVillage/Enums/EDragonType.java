@@ -2,7 +2,8 @@ package dragonsVillage.Enums;
 
 public enum EDragonType {
     DEFAULT("dragons/default.png","dragons/default.png",1),
-    LITTLE_BLUE("dragons/small/dragonBlueLeft.png","dragons/small/dragonBlueRight.png",1);
+    LITTLE_BLUE("dragons/small/dragonBlueLeft.png","dragons/small/dragonBlueRight.png",1),
+    LITTLE_RED("dragons/small/dragonRedLeft.png","dragons/small/dragonRedRight.png",1);
 
 
     private String left;
