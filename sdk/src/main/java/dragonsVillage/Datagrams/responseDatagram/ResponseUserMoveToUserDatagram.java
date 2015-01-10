@@ -1,6 +1,7 @@
 package dragonsVillage.Datagrams.responseDatagram;
 
 import dragonsVillage.Datagrams.ABaseToUserDatagram;
+import dragonsVillage.Enums.EMoveSide;
 
 import java.io.Serializable;
 
@@ -10,12 +11,14 @@ public class ResponseUserMoveToUserDatagram implements Serializable {
     private int x;
     private int y;
     private int speed;
+    private EMoveSide moveSide;
 
-    public ResponseUserMoveToUserDatagram(long userID, int x, int y, int speed) {
+    public ResponseUserMoveToUserDatagram(long userID, int x, int y, int speed, EMoveSide moveSide) {
         this.userID = userID;
         this.x = x;
         this.y = y;
         this.speed = speed;
+        this.moveSide = moveSide;
     }
 
     public int getX() {
@@ -79,5 +82,13 @@ public class ResponseUserMoveToUserDatagram implements Serializable {
 
     public void setUserID(long userID) {
         this.userID = userID;
+    }
+
+    public EMoveSide getMoveSide() {
+        return moveSide;
+    }
+
+    public void setMoveSide(EMoveSide moveSide) {
+        this.moveSide = moveSide;
     }
 }
