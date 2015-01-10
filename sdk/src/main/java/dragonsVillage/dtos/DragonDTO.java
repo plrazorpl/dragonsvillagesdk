@@ -1,6 +1,7 @@
 package dragonsVillage.dtos;
 
 import dragonsVillage.Enums.EDragonType;
+import dragonsVillage.Enums.EMoveSide;
 
 import java.awt.*;
 import java.io.Serializable;
@@ -21,6 +22,8 @@ public class DragonDTO extends ABaseDTO implements Serializable{
 
     private EDragonType dragonType;
     private Image dragonSkin;
+
+    private EMoveSide moveSide;
 
     public DragonDTO(long id, String name, Long mapID, EDragonType dragonType) {
         this.id = id;
@@ -143,5 +146,13 @@ public class DragonDTO extends ABaseDTO implements Serializable{
         result = 31 * result + (dragonType != null ? dragonType.hashCode() : 0);
         result = 31 * result + (dragonSkin != null ? dragonSkin.hashCode() : 0);
         return result;
+    }
+
+    public EMoveSide getMoveSide() {
+        return moveSide;
+    }
+
+    public void setMoveSide(EMoveSide moveSide) {
+        this.moveSide = moveSide;
     }
 }

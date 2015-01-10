@@ -1,5 +1,6 @@
 package dragonsVillage.dtos;
 
+import dragonsVillage.Enums.EMoveSide;
 import dragonsVillage.Enums.EPlayerSkin;
 
 import java.io.Serializable;
@@ -16,6 +17,7 @@ public class LoginUserDTO extends ABaseDTO implements Serializable {
     private int actualSharpX;
     private int actualSharpY;
     private ArrayList<Long> dragonsElements = new ArrayList<>();
+    private EMoveSide moveSide;
 
     public long getId() {
         return id;
@@ -115,5 +117,13 @@ public class LoginUserDTO extends ABaseDTO implements Serializable {
 
     public void setDragonsElements(ArrayList<Long> dragonsElements) {
         this.dragonsElements = dragonsElements;
+    }
+
+    public EMoveSide getMoveSide() {
+        return moveSide;
+    }
+
+    public void setMoveSide(EMoveSide moveSide) {
+        this.moveSide = moveSide;
     }
 }
